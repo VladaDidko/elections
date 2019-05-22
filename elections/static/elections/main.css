@@ -1,3 +1,11 @@
-.nav-link, .navbar-brand{
-  color:white;
+.nav-link, .navbar-brand, .nav-item {
+  color:#ffffff;
+  font-size: 22px;
+}
+.nav-link:hover, .navbar-brand:hover, .nav-item:hover{
+	color:black;
+	box-shadow: inset 400px 0 0 0 #ffffff;
+}
+.text-secondary{
+	width: 100px;
 }

@@ -1,0 +1,18 @@
+{% extends "elections/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    {% for member in members %}
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="media"><img class="account-img" src="{{ member.img.url }}"></div>
+          <div class="info">
+            <h2 class="account-heading">{{ member.firstname }}, {{ member.lastname }}</h2>
+            <p class = "text-secondary">{{ member.position}}  </p>
+            <div class = "text-secondary">{{ member.info}}</div>
+          </div>
+        </div>
+    {% endfor %}      
+  </div>
+</div>
+{% endblock content %}

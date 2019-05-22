@@ -33,8 +33,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'materials',
     'User',
     'bootstrap4',
+    'crispy_forms',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'elections.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Projects/elections/elections/templates/'],
+        'DIRS': ['C:/Users/Vlada/Documents/GitHub/elections/elections/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,4 +121,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'C:/Users/Vlada/Documents/GitHub/elections/elections/static'),  # Here you tell django to look for a folder named 'assets'
+]
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# STATIC_ROOT = "E:/static/"
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
